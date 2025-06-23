@@ -5,9 +5,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 SECRET_KEY = 'django-insecure-3_wu8at=%jh=tkun)zlpowgk2d1gh9qocsj)q1sq)p$hite%#$'
 
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = ["luxbridgerealty.com", '127.0.0.1', '0.0.0.0']
+ALLOWED_HOSTS = ["www.luxbridgerealty.com", "luxbridgerealty.com", '127.0.0.1', '0.0.0.0']
 
 INSTALLED_APPS = [
     'jazzmin',
@@ -46,6 +46,15 @@ MIDDLEWARE = [
 CORS_ALLOWED_ORIGINS = [
     "http://localhost:3000",
     "https://luxbridgerealty.com",
+    "https://www.luxbridgerealty.com",
+]
+
+X_FRAME_OPTIONS = 'SAMEORIGIN'
+
+CSRF_TRUSTED_ORIGINS = [
+    "http://localhost:3000",
+    "https://luxbridgerealty.com",
+    "https://www.luxbridgerealty.com",
 ]
 
 ROOT_URLCONF = 'LuxbridgeBackendConfig.urls'
