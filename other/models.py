@@ -25,3 +25,18 @@ class Seo(models.Model):
     class Meta:
         verbose_name = 'Seo'
         verbose_name_plural = 'Seo'
+
+
+class ClientFeedback(models.Model):
+    fullname = models.CharField(max_length=60)
+    email = models.EmailField()
+    phone = models.CharField(max_length=20, null=True, blank=True)
+    subject = models.CharField(max_length=60)
+    message = models.TextField()
+
+    def __str__(self):
+        return self.fullname
+
+    class Meta:
+        verbose_name = 'ClientFeedback'
+        verbose_name_plural = 'ClientFeedbacks'
